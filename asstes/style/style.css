@@ -5,3 +5,7 @@
     opacity: var(--swiper-pagination-bullet-opacity, 1);
     background: #020911 !important;
 }
+.border-gred-linear {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, #ffa280 0%, #8fd9d9 100%);
+    border-image-slice: 1;}
