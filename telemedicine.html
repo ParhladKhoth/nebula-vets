@@ -13,24 +13,57 @@
 </head>
 <body>
     <nav>
-        <div class="bg-[#494336]">
-          <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
-            <div class="flex items-center justify-between gap-5 lg:py-3 py-2">
-                <div class="max-w-[115px]"> <a href="#"> <img src="./asstes/img/png/logo.png" alt="logo"> </a> </div>
-                <div class="hidden lg:flex">
-                    <ul class="flex xl:gap-[69px] lg:gap-[49px] gap-[29px]">
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">SERVICES</a> </li>
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">ABOUT US</a> </li>
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">LOCATION</a> </li>
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">CAREER</a> </li>
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">PATIENT PORTAL</a> </li>
-                     <li> <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a> </li>
-                    </ul>
-                </div>
-                <a href="#" class="flex lg:hidden"><img src="./asstes/img/png/menu.png" alt="menu"></a>
+      <div class="bg-[#494336] left-0 z-[11] right-0 top-0">
+        <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
+          <div class="flex pb-[18px] pt-[15px] sm:pt-[11px] items-center justify-between">
+            <a href="./index.html" class="block max-w-[90px] sm:max-w-[114px]">
+              <img class="w-full" src="./asstes/img/png/logo.png" alt="">
+            </a>
+            <div class="lg:flex gap-[33px] hidden items-center">
+              <a href="./Services.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">SERVICES</a>
+              <a href="./About.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">ABOUT US</a>           
+              <a href="./location.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">LOCATION</a>
+              <a href="./Career.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">CAREER</a>           
+              <a href="/" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">PATIENT PORTAL</a>      
+              <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
+            </div>
+            <div class="lg:hidden">
+              <img id="menu-bar" class="cursor-pointer" src="./asstes/img/png/menu.png" alt="menubar">
             </div>
           </div>
         </div>
+      </div>
+      <!-- Sidebar -->
+      <div id="sidebar" class="sidebar fixed top-0 right-0 h-full w-64 bg-[#494336] w-full sm:w-[400px] text-white shadow-xl transition-all duration-300 ease-in-out z-50 hidden overflow-auto">
+        <div class="flex justify-between -mt-3 items-center max-w-[1440px] mx-auto px-4">
+          <div class="">
+            <a href="./index.html" class="block !w-[90px] sm:w-[114px]">
+              <img width="100%" class="w-full" src="./asstes/img/png/logo.png" alt="">
+            </a>
+          </div>
+          <div class="flex justify-end p-6">
+            <button id="closeSidebar" class="text-white text-6xl">
+              ×
+            </button>
+          </div>
+        </div>
+        <ul class="gap-y-8 p-6 flex flex-col justify-center items-center">
+          <li><a href="./Services.html" class="text-lg">SERVICES</a></li>
+          <li>
+            <a href="./About.html" class="text-lg text-gredient">ABOUT US</a>
+          </li>
+          <li><a href="./location.html" class="text-lg">LOCATION</a></li>
+          <li><a href="./Career.html" class="text-lg">CAREER</a></li>
+          <li><a href="./index.html" class="text-lg">PATIENT PORTAL</a></li>
+          <li>
+            <div class="w-fit py-2 sm:py-3 overflow-hidden z-[1] relative">
+              <a href="#" class="sm:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Background Overlay -->
+      <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
     </nav>
     <!-- hero section  -->
      <section>
@@ -164,16 +197,16 @@
                       <h2 class="xl:text-2xl lg:text-xl md:text-lg text-base text-[#D7D9DD] lg:pb-8 md:pb-6 sm:pb-4 pb-2.5">Services</h2>
                       <ul>
                         <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Preventive Care</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Sick Patient Care</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Surgery</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="#">Additional Services</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./skin.html">Sick Patient Care</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./surgery.html">Surgery</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="./Services.html">Additional Services</a> </li>
                       </ul>
                     </div>
                     <div>
                       <h2 class="xl:text-2xl lg:text-xl md:text-lg text-base text-[#D7D9DD] lg:pb-8 md:pb-6 sm:pb-4 pb-2.5">Company</h2>
                       <ul>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">About us</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="#">Carreers</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./About.html">About us</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="./Career.html">Carreers</a> </li>
                       </ul>
                     </div>
                     <div>
@@ -205,5 +238,32 @@
       },
     });
   </script>
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBar = document.getElementById("menu-bar");
+        const closeSidebar = document.getElementById("closeSidebar");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const body = document.body;
+
+        menuBar.addEventListener("click", () => {
+          sidebar.classList.remove("hidden");
+          overlay.classList.remove("hidden");
+          body.classList.add("overflow-hidden");
+        });
+
+        closeSidebar.addEventListener("click", () => {
+          sidebar.classList.add("hidden");
+          overlay.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+          sidebar.classList.add("hidden");
+          overlay.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+      });
+    </script>
 </body>
 </html>

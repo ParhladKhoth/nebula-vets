@@ -13,24 +13,57 @@
 </head> 
 <body>
     <nav>
-        <div class="bg-[#494336]">
-          <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
-            <div class="flex items-center justify-between gap-5 lg:py-3 py-2">
-                <div class="max-w-[115px]"> <a href="/"> <img src="./asstes/img/png/logo.png" alt="logo"> </a> </div>
-                <div class="hidden lg:flex">
-                    <ul class="flex xl:gap-[69px] lg:gap-[49px] gap-[29px]">
-                     <li> <a href="./Services.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">SERVICES</a> </li>
-                     <li> <a href="./About.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">ABOUT US</a> </li>
-                     <li> <a href="./location.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">LOCATION</a> </li>
-                     <li> <a href="./Career.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">CAREER</a> </li>
-                     <li> <a href="./index.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">PATIENT PORTAL</a> </li>
-                     <li> <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a> </li>
-                    </ul>
-                </div>
-                <a href="#" class="flex lg:hidden"><img src="./asstes/img/png/menu.png" alt="menu"></a>
+      <div class="bg-[#494336] left-0 z-[11] right-0 top-0">
+        <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
+          <div class="flex pb-[18px] pt-[15px] sm:pt-[11px] items-center justify-between">
+            <a href="./index.html" class="block max-w-[90px] sm:max-w-[114px]">
+              <img class="w-full" src="./asstes/img/png/logo.png" alt="">
+            </a>
+            <div class="lg:flex gap-[33px] hidden items-center">
+              <a href="./Services.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">SERVICES</a>
+              <a href="./About.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">ABOUT US</a>           
+              <a href="./location.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">LOCATION</a>
+              <a href="./Career.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">CAREER</a>           
+              <a href="/" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">PATIENT PORTAL</a>      
+              <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
+            </div>
+            <div class="lg:hidden">
+              <img id="menu-bar" class="cursor-pointer" src="./asstes/img/png/menu.png" alt="menubar">
             </div>
           </div>
         </div>
+      </div>
+      <!-- Sidebar -->
+      <div id="sidebar" class="sidebar fixed top-0 right-0 h-full w-64 bg-[#494336] w-full sm:w-[400px] text-white shadow-xl transition-all duration-300 ease-in-out z-50 hidden overflow-auto">
+        <div class="flex justify-between -mt-3 items-center max-w-[1440px] mx-auto px-4">
+          <div class="">
+            <a href="./index.html" class="block !w-[90px] sm:w-[114px]">
+              <img width="100%" class="w-full" src="./asstes/img/png/logo.png" alt="">
+            </a>
+          </div>
+          <div class="flex justify-end p-6">
+            <button id="closeSidebar" class="text-white text-6xl">
+              ×
+            </button>
+          </div>
+        </div>
+        <ul class="gap-y-8 p-6 flex flex-col justify-center items-center">
+          <li><a href="./Services.html" class="text-lg">SERVICES</a></li>
+          <li>
+            <a href="./About.html" class="text-lg text-gredient">ABOUT US</a>
+          </li>
+          <li><a href="./location.html" class="text-lg">LOCATION</a></li>
+          <li><a href="./Career.html" class="text-lg">CAREER</a></li>
+          <li><a href="./index.html" class="text-lg">PATIENT PORTAL</a></li>
+          <li>
+            <div class="w-fit py-2 sm:py-3 overflow-hidden z-[1] relative">
+              <a href="#" class="sm:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Background Overlay -->
+      <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
     </nav>
     <!-- hero section  -->
      <section>
@@ -78,10 +111,10 @@
         <div class="bg-[#494336]">
              <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
                 <ul class="flex justify-between gap-5 flex-wrap xl:py-20 lg:py-18 md:py-16 sm:py-13 py-11">
-                    <li class="xl:text-4xl md:text-3xl text-2xl A-Regular text-[#D7D9DD] opacity-[0.6] hover:opacity-[1] duration-300 A-Regular"><a href="#">Preventive Care</a></li>
-                    <li class="xl:text-4xl md:text-3xl text-2xl A-Regular text-[#D7D9DD] opacity-[0.6] hover:opacity-[1] duration-300 A-Regular"><a href="#">Sick Patient Care</a></li>
-                    <li class="xl:text-4xl md:text-3xl text-2xl A-Regular text-[#D7D9DD] opacity-[0.6] hover:opacity-[1] duration-300 A-Regular"><a href="#">Surgery</a></li>
-                    <li class="xl:text-4xl md:text-3xl text-2xl A-Regular text-[#D7D9DD] opacity-[0.6] hover:opacity-[1] duration-300 A-Regular"><a href="#">Additional Services</a></li>
+                    <li class="xl:text-4xl md:text-3xl text-2xl A-Regular text-[#D7D9DD] opacity-[0.6] hover:opacity-[1] duration-300 A-Regular"><a href="#Preventive Care">Preventive Care</a></li>
+                    <li class="xl:text-4xl md:text-3xl text-2xl A-Regular text-[#D7D9DD] opacity-[0.6] hover:opacity-[1] duration-300 A-Regular"><a href="#Sick Patient Care">Sick Patient Care</a></li>
+                    <li class="xl:text-4xl md:text-3xl text-2xl A-Regular text-[#D7D9DD] opacity-[0.6] hover:opacity-[1] duration-300 A-Regular"><a href="#Surgery">Surgery</a></li>
+                    <li class="xl:text-4xl md:text-3xl text-2xl A-Regular text-[#D7D9DD] opacity-[0.6] hover:opacity-[1] duration-300 A-Regular"><a href="#Additional Services">Additional Services</a></li>
                 </ul>
              </div>
         </div>
@@ -89,7 +122,7 @@
     <!-- four caed -->
     <section>
       <div class="max-w-[1440px] mx-auto xl:ps-12 lg:ps-8 ps-0">
-        <div class="flex lg:justify-between lg:flex-nowrap flex-wrap lg:gap-3">
+        <div class="flex lg:justify-between lg:flex-nowrap flex-wrap lg:gap-3" id="Preventive Care">
           <div>
             <div class="md:max-w-[376px] max-w-[180px] md:pb-1 lg:pt-20 pt-30">
               <img src="./asstes/img/png/index-2 care big.png" alt="index-2 
@@ -111,7 +144,7 @@
                 <h2 class="roboto-mono lg:text-[28px] md:text-xl text-base font-normal text-[#494336] pb-6"> Animal Health Check</h2>
                 <p class="lg:text-xl md:text-base text-sm leading-[26px] text-[#494336] pb-10 A-Regular"> Our practice offers the convenience of same or next-day appointments to ensure your furry companion receives prompt diagnostic evaluation and treatment. Our dedicated team prioritizes swift action, allowing us to quickly identify the issue at hand and provide the necessary care your pet requires. </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#">learn more </a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="animal health.html">learn more </a>
                 </div>
               </div>
             </div>
@@ -123,7 +156,7 @@
                   Vaccinations are a key component of your pet’s health and essential to prevent life-threatening diseases. Nebula vets offer's all the core and non-core vaccines your pet might
                   need. </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#" >learn more </a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="vaccinations.html" >learn more </a>
                 </div>
               </div>
             </div>
@@ -134,13 +167,13 @@
                   Dental disease and smelly breath is common, and regular cleanings and exams can save your pet a lot of pain and disease later in life. Our advanced state-of-the-art dental
                   suite is equipped for dental cleanings (scale and polish), extractions and any other care your pet may need. </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#" >learn more </a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="dental.html" >learn more </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex justify-between lg:flex-nowrap flex-wrap lg:gap-3">
+        <div class="flex justify-between lg:flex-nowrap flex-wrap lg:gap-3" id="Sick Patient Care">
           <div>
             <div class="md:max-w-[376px] max-w-[180px] lg:pb-20 pt-30">
               <img src="./asstes/img/png/index-2 patient icon.png" alt="index-2 patient icon" width="100%" />
@@ -161,7 +194,7 @@
                 <h2 class="roboto-mono lg:text-[28px] md:text-xl text-base font-normal text-[#494336] pb-6" > Urgent & Emergency Care </h2>
                 <p class="lg:text-xl md:text-base text-sm leading-[26px] text-[#494336] pb-10 A-Regular"> Whether your pet is sick or injured, we’re here to help get them the help they need. This includes telemedicine veterinary consults if you are unsure, and overnight care for 24-hour treatment. </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#" >learn more </a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="./urgent.html">learn more </a>
                 </div>
               </div>
             </div>
@@ -170,7 +203,7 @@
                 <h2 class="roboto-mono lg:text-[28px] md:text-xl text-base font-normal text-[#494336] pb-6">Telemedicine consults </h2>
                 <p class="lg:text-xl md:text-base text-sm leading-[26px] text-[#494336] pb-10 A-Regular"> Nebula vets offers a fast telemedicine service, to help your pet without leaving the home </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#" >learn more </a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="./telemedicine.html" >learn more </a>
                 </div>
               </div>
             </div>
@@ -181,7 +214,7 @@
                   for all the diagnostic tests your pet needs to stay healthy, and to treat those that get sick. We’re able to run tests
                   quickly in-house in situations where a rapid diagnosis is required and offer artificialintelligence alongside veterinary experts. </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#" >learn more
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="diagnostics.html" >learn more
                   </a>
                 </div>
               </div>
@@ -193,13 +226,13 @@
                   prescription medications and pet health products for your pet. If a particular medication is unavailable, our compounding
                   pharmacy can have it delivered to you within 24 hours.</p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#" >learn more </a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="./pharmacy.html" >learn more </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex justify-between lg:flex-nowrap flex-wrap lg:gap-3">
+        <div class="flex justify-between lg:flex-nowrap flex-wrap lg:gap-3" id="Surgery">
           <div>
             <div class="md:max-w-[376px] max-w-[180px] lg:mt-[-105px] lg:pb-22 pt-30 lg:pt-0">
               <img src="./asstes/img/png/index-2 Surgery .png" alt="index-2 Surgery" width="100%" />
@@ -211,7 +244,7 @@
               <p class="lg:text-xl md:text-base text-sm leading-[130%] text-[#494336] lg:max-w-[481px] pb-11 A-Regular">
                 At Nebula Vets, we are equipped to handle a wide range of veterinary services, from emergency surgeries to routine
                 procedures like neuters. Our team of skilled veterinarians is committed to providing the highest level of care to your pets. </p>
-              <a class="text-[#494336] max-w-[163px] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)] hidden lg:flex" href="#" >book now </a>
+              <a class="text-[#494336] max-w-[163px] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)] hidden lg:flex" href="./surgery.html">learn more </a>
             </div>
           </div>
           <div class="flex flex-col">
@@ -234,13 +267,13 @@
                 > Our team comprises highly trained doctors who excel in routine surgery and harness the full potential of our state-of-the-art
                   technology and advanced equipment. With their expertise and proficiency, they ensure optimal surgical outcomes for your beloved pets </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#">learn more</a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="./spay.html">learn more</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex justify-between lg:flex-nowrap flex-wrap lg:gap-3">
+        <div class="flex justify-between lg:flex-nowrap flex-wrap lg:gap-3" id="Additional Services">
           <div>
             <div class="md:max-w-[376px] max-w-[180px] lg:pb-20 lg:pt-20 pt-30">
               <img src="./asstes/img/png/index-2 Additional.png" alt="index-2 Additional" width="100%" />
@@ -264,7 +297,7 @@
                   travels –the process is simple and easy. </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
                   <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]"
-                    href="#" >learn more </a>
+                    href="./travel.html" >learn more </a>
                 </div>
               </div>
             </div>
@@ -288,7 +321,7 @@
                   A microchip, resembling a tiny grain of rice in size and shape, is delicately inserted beneath your pet's skin,
                   specifically between the shoulder blades. This quick and completely safe procedure typically takes only a few minutes. </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#" >learn more </a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="./microchipping.html" >learn more </a>
                 </div>
               </div>
             </div>
@@ -299,7 +332,7 @@
                   laser technology to provide non-invasive and drug-free treatment options that promote healing and enhance the
                   well-being of your beloved pets. </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#">learn more </a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="./laser .html">learn more </a>
                 </div>
               </div>
             </div>
@@ -309,7 +342,7 @@
                 <p class="lg:text-xl md:text-base text-sm leading-[26px] text-[#494336] pb-10 A-Regular"> The decision to say goodbye to your pet is the most difficult
                   decision you’ll have to make. Our team at nebula vets is here to guide you through the process with compassion and can perform end-of-life services at the time of your choosing. </p>
                 <div class="lg:pb-15 pb-13 border-b lg:max-w-[483px]">
-                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out    duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="#" >learn more </a>
+                  <a class="text-[#494336] md:text-lg text-base font-medium uppercase roboto-mono py-3 px-9 bg-white rounded-3xl bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9] ease-in-out    duration-1000 hover:shadow-[0px_3px_15px_0px_rgba(228,178,178)]" href="./hospice.html" >learn more </a>
                 </div>
               </div>
             </div>
@@ -350,16 +383,16 @@
                       <h2 class="xl:text-2xl lg:text-xl md:text-lg text-base text-[#D7D9DD] lg:pb-8 md:pb-6 sm:pb-4 pb-2.5">Services</h2>
                       <ul>
                         <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Preventive Care</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Sick Patient Care</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Surgery</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="#">Additional Services</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./skin.html">Sick Patient Care</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./surgery.html">Surgery</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="./Services.html">Additional Services</a> </li>
                       </ul>
                     </div>
                     <div>
                       <h2 class="xl:text-2xl lg:text-xl md:text-lg text-base text-[#D7D9DD] lg:pb-8 md:pb-6 sm:pb-4 pb-2.5">Company</h2>
                       <ul>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">About us</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="#">Carreers</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./About.html">About us</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="./Career.html">Carreers</a> </li>
                       </ul>
                     </div>
                     <div>
@@ -388,5 +421,32 @@
       },
     });
   </script>
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBar = document.getElementById("menu-bar");
+        const closeSidebar = document.getElementById("closeSidebar");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const body = document.body;
+
+        menuBar.addEventListener("click", () => {
+          sidebar.classList.remove("hidden");
+          overlay.classList.remove("hidden");
+          body.classList.add("overflow-hidden");
+        });
+
+        closeSidebar.addEventListener("click", () => {
+          sidebar.classList.add("hidden");
+          overlay.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+          sidebar.classList.add("hidden");
+          overlay.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+      });
+    </script>
 </body>
 </html>

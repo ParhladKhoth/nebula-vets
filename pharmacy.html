@@ -11,98 +11,127 @@
 </head>
 <body>
     <nav>
-        <div class="bg-[#494336]">
-          <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
-            <div class="flex items-center justify-between gap-5 lg:py-3 py-2">
-                <div class="max-w-[115px]"> <a href="#"> <img src="./asstes/img/png/logo.png" alt="logo"> </a> </div>
-                <div class="hidden lg:flex">
-                    <ul class="flex xl:gap-[69px] lg:gap-[49px] gap-[29px]">
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">SERVICES</a> </li>
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">ABOUT US</a> </li>
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">LOCATION</a> </li>
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">CAREER</a> </li>
-                     <li> <a href="#" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">PATIENT PORTAL</a> </li>
-                     <li> <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a> </li>
-                    </ul>
-                </div>
-                <a href="#" class="flex lg:hidden"><img src="./asstes/img/png/menu.png" alt="menu"></a>
+      <div class="bg-[#494336] left-0 z-[11] right-0 top-0">
+        <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
+          <div class="flex pb-[18px] pt-[15px] sm:pt-[11px] items-center justify-between">
+            <a href="./index.html" class="block max-w-[90px] sm:max-w-[114px]">
+              <img class="w-full" src="./asstes/img/png/logo.png" alt="">
+            </a>
+            <div class="lg:flex gap-[33px] hidden items-center">
+              <a href="./Services.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">SERVICES</a>
+              <a href="./About.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">ABOUT US</a>           
+              <a href="./location.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">LOCATION</a>
+              <a href="./Career.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">CAREER</a>           
+              <a href="/" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">PATIENT PORTAL</a>      
+              <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
+            </div>
+            <div class="lg:hidden">
+              <img id="menu-bar" class="cursor-pointer" src="./asstes/img/png/menu.png" alt="menubar">
             </div>
           </div>
         </div>
+      </div>
+      <!-- Sidebar -->
+      <div id="sidebar" class="sidebar fixed top-0 right-0 h-full w-64 bg-[#494336] w-full sm:w-[400px] text-white shadow-xl transition-all duration-300 ease-in-out z-50 hidden overflow-auto">
+        <div class="flex justify-between -mt-3 items-center max-w-[1440px] mx-auto px-4">
+          <div class="">
+            <a href="./index.html" class="block !w-[90px] sm:w-[114px]">
+              <img width="100%" class="w-full" src="./asstes/img/png/logo.png" alt="">
+            </a>
+          </div>
+          <div class="flex justify-end p-6">
+            <button id="closeSidebar" class="text-white text-6xl">
+              ×
+            </button>
+          </div>
+        </div>
+        <ul class="gap-y-8 p-6 flex flex-col justify-center items-center">
+          <li><a href="./Services.html" class="text-lg">SERVICES</a></li>
+          <li>
+            <a href="./About.html" class="text-lg text-gredient">ABOUT US</a>
+          </li>
+          <li><a href="./location.html" class="text-lg">LOCATION</a></li>
+          <li><a href="./Career.html" class="text-lg">CAREER</a></li>
+          <li><a href="./index.html" class="text-lg">PATIENT PORTAL</a></li>
+          <li>
+            <div class="w-fit py-2 sm:py-3 overflow-hidden z-[1] relative">
+              <a href="#" class="sm:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Background Overlay -->
+      <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
     </nav>
     <!-- hero section  -->
      <section>
      <div class="bg-[#494336] relative">
         <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
           <div class="mx-auto xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0  xl:pt-[140px] lg:pt-[110px] pt-[185px] xl:pb-21 lg:pb-18 pb-15" >
-            <h1 class="xl:text-[70px] lg:text-6xl md:text-5xl text-[32px] text-[#D7D9DD]  m-0 A-Regular ">Surgery</h1>
-            <p class="xl:text-xl lg:text-lg md:text-base text-sm text-[#D7D9DD]  pt-5 pb-10 A-Regular max-w-[660px]">In our state-of-the-art surgery suite, equipped with advanced technology and facilities, our highly experienced veterinarians are proficient in performing a wide range of surgical procedures. From routine surgeries like spays and neuters to more specialized soft tissue surgeries such as mass removals, laceration repair, abscess treatment, and dental procedures, we offer comprehensive surgical care for your pet.</p>
+            <h1 class="xl:text-[70px] lg:text-6xl md:text-5xl text-[32px] text-[#D7D9DD]  m-0 A-Regular ">Pharmacy</h1>
+            <p class="xl:text-xl lg:text-lg md:text-base text-sm text-[#D7D9DD]  pt-5 pb-10 A-Regular max-w-[630px]">At Nebula Vets, we understand the importance of convenient access to necessary medications and pet health products for your furry companions. That's why we have an on-site pharmacy stocked with a wide range of prescription medications, prescription diets, and other pet health products.</p>
             <button href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</button>
           </div>
-          <div class=" xl:min-w-[440px] lg:max-w-[370px] max-w-[330px] absolute right-0 bottom-8 hidden md:flex"><img src="./asstes/img/png/index-10 Surgery Icon.png" alt="index-10 Surgery Icon" width="100%"></div>
-          <div class="top-7 absolute right-0 flex md:hidden "><img src="./asstes/img/png/indeex 10 surgery lcon 2.png" alt="indeex 10 surgery lcon 2"></div>
+          <div class=" xl:min-w-[510px] lg:max-w-[410px] max-w-[370px] absolute right-1 bottom-0 hidden md:flex"><img src="./asstes/img/png/index-9 Pharmacy Icon.png" alt="index-9 Pharmacy Icon" width="100%"></div>
+          <div class="top-7 absolute right-0 flex md:hidden "><img src="./asstes/img/png/index-9 Pharmacy Icon 2 .png" alt="index-9 Pharmacy Icon 2"></div>
         </div>  
      </div>
     </section>
-    <!-- Does my pet need a pre-consultation? -->
+    <!-- How it works -->
      <section>
         <div class="bg-gray-200 lg:pt-20 pt-15 lg:pb-35 pb-29 relative">
             <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
                 <div class="xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0 xl:pe-24 lg:pe-18 md:pe-12 sm:pe-0">
-                  <h2 class="A-Regular text-[#494336] pb-7 lg:text-4xl md:text-3xl text-2xl">Does my pet need a pre-consultation?</h2>
-                  <p class="A-Regular text-[#494336] xl:text-xl lg:text-lg md:text-base text-sm max-w-[1090px]">Yes, by conducting a pre-operative consultation, performing a physical examination, and considering bloodwork results, we can minimize the risks associated with surgery and optimize the outcome for your beloved pet. Your pet's safety and well-being are our top priorities throughout the entire surgical process.</p>
-                 <h2 class="A-Regular text-[#494336] lg:text-4xl md:text-3xl text-2xl pt-7">How much will it cost?</h2>
-                  <p class="A-Regular text-[#494336] xl:text-xl lg:text-lg md:text-base text-sm max-w-[1090px] pt-7">Surgery costs can vary based on several factors, including the specific procedure your pet requires, their weight, any necessary medications, and additional considerations. To provide you with an accurate estimate for your pet's surgery, we recommend booking a pre-surgical consultation with our experienced veterinarians.</p>
-                  <p class="A-Regular text-[#494336] xl:text-xl lg:text-lg md:text-base text-sm max-w-[1090px] pt-7">If you prefer, you can also reach out to us via email at nebulavets@gmail.comto request an estimate. Please provide us with as much information as possible about your pet's condition and the specific procedure they may need. Our team will review your request and respond promptly with an estimate based on the information provided.</p>
-                   <h2 class="A-Regular text-[#494336] lg:text-4xl md:text-3xl text-2xl pt-7">Do you accept insurance?</h2>
-                   <p class="A-Regular text-[#494336] xl:text-xl lg:text-lg md:text-base text-sm max-w-[1090px] pt-7">Yes, at Nebula Vets, we accept all forms of pet insurance. We understand the importance of financial support when it comes to your pet's healthcare needs. By accepting various pet insurance providers, we aim to make the reimbursement process as seamless as possible for our clients.</p>
+                  <h2 class="A-Regular text-[#494336] pb-7 lg:text-4xl md:text-3xl text-2xl">How it works</h2>
+                  <p class="A-Regular text-[#494336] lg:text-lg md:text-base text-sm max-w-[1060px]">We understand that time is of the essence when it comes to your pet's health, and waiting for medications to be obtained from an external pharmacy can be inconvenient. By keeping a comprehensive inventory of commonly used medications in our pharmacy, we strive to streamline the process and minimize any delays in providing your pet with the necessary treatment.</p>
+                  <p class="A-Regular text-[#494336] lg:text-lg md:text-base text-sm max-w-[1060px] pt-7">However, if a specific medication is not readily available in our on-site pharmacy, we have a solution. We work closely with a trusted compounding pharmacy that specializes in creating customized medications. This allows us to quickly obtain or create the specific medication your pet needs. Once the medication is compounded, we can arrange for it to be delivered to you, ensuring that you have it in a timely manner.</p>
                 </div>
             </div>
-            <div class="absolute md:bottom-0 bottom-4 left-0 right-0"><img src="./asstes/img/png/index-10 NBL.png" alt="index-10 NBL" width="100%"></div>
+            <div class="absolute md:bottom-0 bottom-6 left-0 right-0"><img src="./asstes/img/png/index-8 NBL.png" alt="index-8 NBL" width="100%"></div>
         </div>
      </section>
-    <!-- Why Choose Nebula Vets for Your Pet's Surgery: -->
+    <!-- Why Choose our Pharmacy: -->
     <section>
     <div class="bg-[#FFF]">
        <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
-        <h2 class="xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0 xl:pe-24 lg:pe-18 md:pe-12 sm:pe-0 text-[#494336] xl:text-4xl lg:text-3xl md:text-[27px] text-2xl lg:pt-20 pt-15 A-Regular">Why Choose Nebula Vets for Your Pet's Surgery:</h2> 
+        <h2 class="xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0 xl:pe-24 lg:pe-18 md:pe-12 sm:pe-0 text-[#494336] lg:text-[28px] text-2xl lg:pt-20 pt-15">Why Choose our Pharmacy:</h2> 
         <div class="flex flex-col lg:gap-3 lg:pb-[80px] pb-[60px] xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0 xl:pe-24 lg:pe-18 md:pe-12 sm:pe-0">           
         <div>
              <!-- Accordion Item 1 -->
             <div class="border-b border-slate-200">
              <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-             <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Expert Surgical Team</span>
+             <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Convenience</span>
              <span id="icon-1" class=" transition-transform duration-300">
              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
              <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
              </button>
              <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-             <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] A-Regular max-w-[970px]">Our team of skilled veterinarians brings years of experience and expertise to the operating table. With a deep understanding of advanced surgical techniques and a commitment to staying abreast of the latest advancements in veterinary surgery, our surgeons are well-equipped to handle a wide range of procedures with exceptional skill and care.</div>
+             <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] A-Regular max-w-[970px]">Having an in-house pharmacy at our veterinary practice means you can conveniently obtain all your pet's medications and healthcare products in one place. No more running to different locations or waiting for orders to arrive. Our knowledgeable pharmacy team is ready to assist you and provide expert guidance on proper medication administration.</div>
             </div>
             </div>
       <!-- Accordion Item 2 -->
       <div class="border-b border-slate-200">
         <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Comprehensive Surgical Services</span>
+          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Quality Assurance</span>
            <span id="icon-2" class=" transition-transform duration-300">
            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
            <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
         </button>
          <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out A-Regular ">
          <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px]
-          A-Regular">From routine spays and neuters to complex soft tissue surgeries, orthopedic procedures, tumor removals, and emergency surgeries, our hospital offers a comprehensive range of surgical services tailored to meet the unique needs of your pet. You can trust us to deliver personalized surgical solutions that prioritize your pet's well-being.</div>
+          A-Regular">We understand the importance of ensuring the safety and effectiveness of medications for your pets. Our pharmacy sources medications directly from reputable manufacturers, guaranteeing their authenticity, quality, and proper storage. You can have peace of mind knowing that the medications you receive from us are of the highest standard.</div>
          </div>
        </div>
       <!-- Accordion Item 3 -->
         <div class="border-b border-slate-200">
           <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center text-start gap-3 py-8">
-           <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Cutting-Edge Facilities and Technology</span>
+           <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Prescription Medications</span>
             <span id="icon-3" class=" transition-transform duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
             <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
           </button>
            <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-           <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px] A-Regular">At Nebula Vets, we take pride in our state-of-the-art surgical facilities and advanced equipment. Our hospital is equipped with modern anesthesia monitoring systems, surgical instruments, and techniques, ensuring the highest level of safety, precision, and comfort for your pet.</div>
+           <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Our pharmacy carries a wide range of prescription medications to address various medical conditions and treatments. Our veterinarians will carefully evaluate your pet's needs and prescribe the most appropriate medication, dosages, and duration. Our goal is to support your pet's health and recovery with the right medications tailored to their specific requirements.</div>
            </div>
         </div>
         </div> 
@@ -110,51 +139,63 @@
         <!-- Accordion Item 4 -->
         <div class="border-b border-slate-200">
           <button onclick="toggleAccordion(4)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-           <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Personalized Care</span>
+           <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Prescription Diets</span>
             <span id="icon-4" class=" transition-transform duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
             <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
           </button>
           <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-           <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px] A-Regular">We understand that each pet is unique, and their surgical needs require individualized attention. Our veterinarians take the time to thoroughly evaluate your pet's health, discuss treatment options, and design a customized surgical plan tailored to their specific condition and requirements. We value open communication and are always available to address any concerns or questions you may have.</div>
+           <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px] A-Regular">We offer a selection of therapeutic prescription diets designed to address specific dietary needs and support various health conditions. Whether your pet requires a special diet for weight management, food allergies, kidney disease, or other health concerns, our pharmacy can provide you with the necessary options to meet their nutritional requirements.</div>
           </div>
         </div>
       <!-- Accordion Item 5 -->
         <div class="border-b border-slate-200">
          <button onclick="toggleAccordion(5)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Optimal Safety and Comfort</span>
+          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Wellness and Preventive Products</span>
            <span id="icon-5" class=" transition-transform duration-300">
            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
            <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
          </button>
          <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-         <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Your pet's safety and comfort are of paramount importance to us. Our experienced team utilizes the latest anesthetic protocols tailored to your pet's needs, and we closely monitor their vital signs throughout the entire surgical procedure. We also employ advanced pain management techniques to ensure your pet's well-being and minimize any discomfort.</div>
+         <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Beyond medications, our pharmacy also stocks a range of wellness and preventive products to support your pet's overall health. This includes flea and tick preventives, heartworm preventives, joint supplements, dental care products, grooming supplies, and more. Our knowledgeable team can help you choose the right products to keep your pet healthy and thriving.</div>
          </div>
         </div>
       <!-- Accordion Item 6 -->
         <div class="border-b border-slate-200">
          <button onclick="toggleAccordion(6)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Compassionate Post-Surgical Care</span>
+          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Expert Guidance</span>
            <span id="icon-6" class=" transition-transform duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
           <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
         </button>
         <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-         <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Our commitment to your pet's well-being extends beyond the operating room. After surgery, we provide attentive post-operative care to support their recovery. We provide detailed instructions on at-home care, pain management, and follow-up appointments to ensure a smooth healing process. Our caring staff is always here to address any concerns and provide support during your pet's recovery journey.</div>
+         <div class="pb-5 xl-text-xl lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Our pharmacy team is composed of experienced professionals who are dedicated to providing you with personalized service and guidance. We are here to answer your questions, address any concerns, and offer advice on medication administration, potential side effects, and proper storage.ur pharmacy team is composed of experienced professionals who are dedicated to providing you with personalized service and guidance. We are here to answer your questions, address any concerns, and offer advice on medication administration, potential side effects, and proper storage.</div>
         </div>
        </div> 
+       <!-- Accordion Item 7 -->
+        <div class="border-b border-slate-200">
+         <button onclick="toggleAccordion(7)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
+          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Prescription Refills</span>
+           <span id="icon-7" class=" transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
+          <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
+        </button>
+        <div id="content-7" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+         <div class="pb-5  lg:text-lg md:text-base text-sm text-[#494336] max-w-[970px] A-Regular">If your pet requires ongoing medication, our pharmacy makes it easy for you to refill prescriptions. Simply contact us, and we will have your pet's medications ready for pick-up or arrange for convenient delivery options.</div>
+        </div>
+       </div>  
       </div>
           </div>
        </div> 
     </div>
     </section>
-     <!-- Choose Nebula Vets for Exceptional Surgical Care: -->
+     <!-- Experience Exceptional Pharmacy Services at Nebula Vets: -->
      <section>
         <div class="bg-gray-200 lg:py-20 py-15">
             <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
                 <div class="xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0 xl:pe-24 lg:pe-18 md:pe-12 sm:pe-0">
-                  <h2 class="A-Regular text-[#494336] pb-7 lg:text-4xl md:text-3xl text-2xl">Choose Nebula Vets for Exceptional Surgical Care:</h2>
-                  <p class="A-Regular text-[#494336] xl:text-xl lg:text-lg md:text-base text-sm max-w-[1090px]"> When it comes to your pet's surgical needs, Nebula Vets stands out as a trusted choice. We offer exceptional surgical care with compassion, expertise, and advanced technology. Your pet's well-being is our top priority, and we are committed to providing the highest quality surgical services to help them live a healthy and happy life.</p>
+                  <h2 class="A-Regular text-[#494336] pb-7 lg:text-4xl md:text-3xl text-2xl">Experience Exceptional Pharmacy Services at Nebula Vets:</h2>
+                  <p class="A-Regular text-[#494336] lg:text-lg md:text-base text-sm max-w-[1050px]">Your pet's health and well-being are our top priorities, and our pharmacy is an integral part of our commitment to providing comprehensive veterinary care. Trust in the expertise of our pharmacy team to ensure your pet receives the highest standard of pharmaceutical services and products.</p>
                 </div>
             </div>
         </div>
@@ -164,8 +205,7 @@
         <div class="bg-[#494336] lg:pt-20 lg:pb-26 pt-15 pb-46 relative border-b border-slate-200 border-solid">
            <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
             <div class="xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0 ">
-                <h2 class="A-Regular text-[#D7D9DD] pb-4 xl:text-4xl lg:text-3xl text-2xl">We look forward to seeing you and your pet soon!</h2>
-                <p class="text-[#D7D9DD] text-xl A-Regular pb-7 max-w-[880px]">Contact Nebula Vets today to schedule a consultation or discuss your pet's surgical needs. Let us be your partner in providing outstanding surgical care for your furry companion.</p>
+                <h2 class="A-Regular text-[#D7D9DD] pb-7 xl:text-4xl lg:text-3xl text-2xl max-w-[500px]">We look forward to seeing you and your pet soon!</h2>
                 <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
             </div>
             <div class="absolute right-0 bottom-0 lg:max-w-[530px] max-w-[450px]"><img src="./asstes/img/png/index-3 Nebula.png" alt="index-3 Nebula"></div>
@@ -205,16 +245,16 @@
                       <h2 class="xl:text-2xl lg:text-xl md:text-lg text-base text-[#D7D9DD] lg:pb-8 md:pb-6 sm:pb-4 pb-2.5">Services</h2>
                       <ul>
                         <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Preventive Care</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Sick Patient Care</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Surgery</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="#">Additional Services</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./skin.html">Sick Patient Care</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./surgery.html">Surgery</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="./Services.html">Additional Services</a> </li>
                       </ul>
                     </div>
                     <div>
                       <h2 class="xl:text-2xl lg:text-xl md:text-lg text-base text-[#D7D9DD] lg:pb-8 md:pb-6 sm:pb-4 pb-2.5">Company</h2>
                       <ul>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">About us</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="#">Carreers</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./About.html">About us</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="./Career.html">Carreers</a> </li>
                       </ul>
                     </div>
                     <div>
@@ -247,5 +287,32 @@
     } else { content.style.maxHeight = content.scrollHeight + 'px'; icon.innerHTML = minusSVG;}
   }
 </script>
+ <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBar = document.getElementById("menu-bar");
+        const closeSidebar = document.getElementById("closeSidebar");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const body = document.body;
+
+        menuBar.addEventListener("click", () => {
+          sidebar.classList.remove("hidden");
+          overlay.classList.remove("hidden");
+          body.classList.add("overflow-hidden");
+        });
+
+        closeSidebar.addEventListener("click", () => {
+          sidebar.classList.add("hidden");
+          overlay.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+          sidebar.classList.add("hidden");
+          overlay.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+      });
+    </script>
 </body>
 </html>

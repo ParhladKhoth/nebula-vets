@@ -11,54 +11,72 @@
 </head>
 <body>
     <nav>
-        <div class="bg-[#494336]">
-          <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
-            <div class="flex items-center justify-between gap-5 lg:py-3 py-2">
-                <div class="max-w-[115px]"> <a href="/"> <img src="./asstes/img/png/logo.png" alt="logo"> </a> </div>
-                <div class="hidden lg:flex">
-                    <ul class="flex xl:gap-[69px] lg:gap-[49px] gap-[29px]">
-                     <li> <a href="./Services.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">SERVICES</a> </li>
-                     <li> <a href="./About.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">ABOUT US</a> </li>
-                     <li> <a href="./location.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">LOCATION</a> </li>
-                     <li> <a href="./Career.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">CAREER</a> </li>
-                     <li> <a href="./index.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">PATIENT PORTAL</a> </li>
-                     <li> <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a> </li>
-                    </ul>
-                </div>
-                <a href="#" class="flex lg:hidden"><img src="./asstes/img/png/menu.png" alt="menu"></a>
+      <div class="bg-[#494336] left-0 z-[11] right-0 top-0">
+        <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
+          <div class="flex pb-[18px] pt-[15px] sm:pt-[11px] items-center justify-between">
+            <a href="./index.html" class="block max-w-[90px] sm:max-w-[114px]">
+              <img class="w-full" src="./asstes/img/png/logo.png" alt="">
+            </a>
+            <div class="lg:flex gap-[33px] hidden items-center">
+              <a href="./Services.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">SERVICES</a>
+              <a href="./About.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">ABOUT US</a>           
+              <a href="./location.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">LOCATION</a>
+              <a href="./Career.html" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">CAREER</a>           
+              <a href="/" class="text-sm font-medium text-[#D7D9DD] hover:text-black duration-300  tracking-[1.4px]">PATIENT PORTAL</a>      
+              <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
+            </div>
+            <div class="lg:hidden">
+              <img id="menu-bar" class="cursor-pointer" src="./asstes/img/png/menu.png" alt="menubar">
             </div>
           </div>
         </div>
+      </div>
+      <!-- Sidebar -->
+      <div id="sidebar" class="sidebar fixed top-0 right-0 h-full w-64 bg-[#494336] w-full sm:w-[400px] text-white shadow-xl transition-all duration-300 ease-in-out z-50 hidden overflow-auto">
+        <div class="flex justify-between -mt-3 items-center max-w-[1440px] mx-auto px-4">
+          <div class="">
+            <a href="./index.html" class="block !w-[90px] sm:w-[114px]">
+              <img width="100%" class="w-full" src="./asstes/img/png/logo.png" alt="">
+            </a>
+          </div>
+          <div class="flex justify-end p-6">
+            <button id="closeSidebar" class="text-white text-6xl">
+              ×
+            </button>
+          </div>
+        </div>
+        <ul class="gap-y-8 p-6 flex flex-col justify-center items-center">
+          <li><a href="./Services.html" class="text-lg">SERVICES</a></li>
+          <li>
+            <a href="./About.html" class="text-lg text-gredient">ABOUT US</a>
+          </li>
+          <li><a href="./location.html" class="text-lg">LOCATION</a></li>
+          <li><a href="./Career.html" class="text-lg">CAREER</a></li>
+          <li><a href="./index.html" class="text-lg">PATIENT PORTAL</a></li>
+          <li>
+            <div class="w-fit py-2 sm:py-3 overflow-hidden z-[1] relative">
+              <a href="#" class="sm:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Background Overlay -->
+      <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
     </nav>
     <!-- hero section  -->
      <section>
      <div class="bg-[#494336] relative">
         <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
           <div class="mx-auto xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0  xl:pt-[140px] lg:pt-[110px] md:pt-[70px] sm:pt-[50px] pt-[165px] xl:pb-21 lg:pb-18 pb-15" >
-            <h1 class="xl:text-[70px] lg:text-6xl md:text-5xl text-[32px] text-[#D7D9DD]  m-0 A-Regular leading-none sm:max-w-[680px] max-w-[150px]">Laser Therapy</h1>
-            <p class="xl:text-xl lg:text-lg md:text-base text-sm text-[#D7D9DD]  pt-5 pb-10 A-Regular max-w-[660px]">At Nebula Vets, we are excited to offer the remarkable benefits of laser therapy for our furry patients. Our state-of-the-art veterinary hospital utilizes advanced laser technology to provide non-invasive and drug-free treatment options that promote healing and enhance the well-being of your beloved pets. Join us as we explore the transformative effects of laser therapy.</p>
+            <h1 class="xl:text-[70px] lg:text-6xl md:text-5xl text-[32px] text-[#D7D9DD]  m-0 A-Regular leading-none sm:max-w-[680px] max-w-[150px]">Skin & Dermatology</h1>
+            <p class="xl:text-xl lg:text-lg md:text-base text-sm text-[#D7D9DD]  pt-5 pb-10 A-Regular max-w-[660px]">At our practice, we specialize in the treatment of various skin-related issues, ranging from bacterial or yeast infections to bites and rashes. Our approach involves a comprehensive process of test-diagnose-treat, ensuring accurate identification of the underlying cause and tailored treatment plans. Trust us to address your pet's skin concerns with expertise and precision for optimal results.</p>
             <button href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</button>
           </div>
-          <div class=" xl:min-w-[410px] lg:max-w-[340px] md:max-w-[250px] max-w-[200px] absolute right-0 bottom-12 hidden sm:flex"><img src="./asstes/img/png/hero Laser .png" alt="hero laser" width="100%"></div>
-          <div class="top-0 absolute right-0 flex sm:hidden "><img src="./asstes/img/png/hero Laser 2.png" alt="hero laser 2"></div>
+          <div class=" xl:min-w-[490px] lg:max-w-[400px] md:max-w-[320px] max-w-[250px] absolute right-7 bottom-12 hidden sm:flex"><img src="./asstes/img/png/hero skin.png" alt="hero skin" width="100%"></div>
+          <div class="top-1 absolute right-1 flex sm:hidden "><img src="./asstes/img/png/hero skin 2.png" alt="hero skin 2"></div>
         </div>  
      </div>
     </section>
-    <!-- Euthanasia Service -->
-     <section>
-        <div class="bg-gray-200 lg:pt-20 pt-15 lg:pb-35 pb-24 relative">
-            <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
-                <div class="xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0 xl:pe-24 lg:pe-18 md:pe-12 sm:pe-0 relative z-5">
-                  <h2 class="text-[#494336] xl:text-[28px] lg:text-2xl ms:text-xl sm:text-lg text-base lg:pb-15 pb-11 lg:max-w-[1090px] sm:max-w-[700px] max-w-[280px]">Discover the Power of Laser Therapy at Nebula Vets: Elevating Pet Wellness with Advanced Healing</h2>
-                  <h2 class="A-Regular text-[#494336] pb-7 lg:text-4xl md:text-3xl text-2xl">What is Laser Therapy?</h2>
-                  <p class="A-Regular text-[#494336] xl:text-xl lg:text-lg md:text-base text-sm max-w-[1100px]">Laser therapy, also known as low-level laser therapy or cold laser therapy, is a cutting-edge treatment modality that utilizes focused light energy to stimulate cellular activity and promote natural healing processes within the body. This non-invasive and painless therapy is safe for pets of all ages and can be used alongside other treatments to provide comprehensive care.</p>
-                  <h2 class="A-Regular text-[#494336] pb-7 pt-7 lg:text-4xl md:text-3xl text-2xl">How Does Laser Therapy Work?</h2>
-                  <p class="A-Regular text-[#494336] xl:text-xl lg:text-lg md:text-base text-sm max-w-[1100px]">During a laser therapy session, a handheld device emits a concentrated beam of laser light that penetrates the targeted tissues. The light energy is absorbed by the cells, stimulating the production of adenosine triphosphate (ATP), a molecule that fuels cellular activities. This increase in ATP promotes accelerated tissue repair, reduces inflammation, and relieves pain.</p>
-                </div>
-            </div>
-            <div class="absolute md:bottom-0 bottom-2 left-0 right-0 "><img src="./asstes/img/png/index-12 NBL.png" alt="index-12 NBL" width="100%"></div>
-        </div>
-     </section>
      <!-- Benefits of Laser Therapy: -->
     <section>
     <div class="bg-[#FFF]">
@@ -69,38 +87,38 @@
              <!-- Accordion Item 1 -->
             <div class="border-b border-slate-200">
              <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-             <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Pain Relief</span>
+             <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Specialized Expertise</span>
              <span id="icon-1" class=" transition-transform duration-300">
              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
              <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
              </button>
              <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-             <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] A-Regular max-w-[970px]">During a laser therapy session, a handheld device emits a concentrated beam of laser light that penetrates the targeted tissues. The light energy is absorbed by the cells, stimulating the production of adenosine triphosphate (ATP), a molecule that fuels cellular activities. This increase in ATP promotes accelerated tissue repair, reduces inflammation, and relieves pain.</div>
+             <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] A-Regular max-w-[970px]">Our veterinary team includes experienced dermatologists who have a deep understanding of skin conditions and diseases affecting pets. With their specialized knowledge and advanced training, they are equipped to diagnose and treat a wide range of dermatological issues.</div>
             </div>
             </div>
       <!-- Accordion Item 2 -->
       <div class="border-b border-slate-200">
         <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Accelerated Healing</span>
+          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Comprehensive Skin Examinations</span>
            <span id="icon-2" class=" transition-transform duration-300">
            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
            <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
         </button>
          <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out A-Regular ">
          <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px]
-          A-Regular">The focused laser light stimulates cellular metabolism and blood flow to the treated area, enhancing the delivery of oxygen, nutrients, and immune cells. This accelerated healing process promotes tissue repair, reduces scar tissue formation, and aids in wound healing.</div>
+          A-Regular">We begin with a thorough examination of your pet's skin, coat, and overall health. Our dermatologists will assess any existing skin problems, identify potential allergies or infections, and perform necessary diagnostic tests to determine the root cause of the issue.</div>
          </div>
        </div>
       <!-- Accordion Item 3 -->
         <div class="border-b border-slate-200">
           <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center text-start gap-3 py-8">
-           <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Reducedued Inflammation</span>
+           <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Advanced Diagnostic Techniques</span>
             <span id="icon-3" class=" transition-transform duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
             <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
           </button>
            <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-           <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Laser therapy has anti-inflammatory effects by reducing swelling and increasing lymphatic drainage. This is especially beneficial for pets with inflammatory conditions, such as soft tissue injuries, skin infections, or dental diseases.</div>
+           <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">At Nebula Vets, we employ state-of-the-art diagnostic techniques to gain a comprehensive understanding of your pet's skin condition. This may include skin scrapings, cytology, bacterial and fungal cultures, allergy testing, and biopsies. These tests provide valuable insights that guide our treatment approach.</div>
            </div>
         </div>
         </div> 
@@ -108,63 +126,75 @@
         <!-- Accordion Item 4 -->
         <div class="border-b border-slate-200">
           <button onclick="toggleAccordion(4)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-           <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Non-Invasive and Drug-Free</span>
+           <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Personalized Treatment Plans</span>
             <span id="icon-4" class=" transition-transform duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
             <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
           </button>
           <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-           <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Laser therapy is a non-invasive alternative to traditional pain management methods, such as medication or surgery. It does not require anesthesia or sedation, making it a safe and stress-free option for pets.</div>
+           <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Every pet is unique, and their skin care needs vary. Our dermatologists develop personalized treatment plans tailored to your pet's specific condition, considering factors such as their breed, age, and medical history. We utilize a combination of medications, topical treatments, dietary adjustments, and lifestyle modifications to address the underlying causes and provide effective relief.</div>
           </div>
         </div>
       <!-- Accordion Item 5 -->
         <div class="border-b border-slate-200">
          <button onclick="toggleAccordion(5)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Enhanced Mobility</span>
+          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Allergy Management</span>
            <span id="icon-5" class=" transition-transform duration-300">
            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
            <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
          </button>
          <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-         <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Pets experiencing joint stiffness or limited mobility due to musculoskeletal conditions can benefit from laser therapy. By reducing inflammation, relieving pain, and promoting tissue repair, laser therapy helps improve range of motion, allowing pets to move more comfortably.</div>
+         <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Allergies are a common cause of skin issues in pets. Our dermatologists have expertise in identifying and managing allergies, whether they are due to food, environmental factors, or parasites. We offer allergy testing, immunotherapy, and recommend appropriate allergen avoidance strategies to help your pet find relief.</div>
          </div>
         </div>
       <!-- Accordion Item 6 -->
         <div class="border-b border-slate-200">
          <button onclick="toggleAccordion(6)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Quick and Convenient</span>
+          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Parasite Control</span>
            <span id="icon-6" class=" transition-transform duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
           <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
         </button>
         <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-         <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Laser therapy sessions are typically short and can be completed within a few minutes. Pets experience no discomfort during the treatment and often find it relaxing. The frequency and duration of the sessions depend on the pet's condition and response to therapy.</div>
+         <div class="pb-5 xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Fleas, ticks, and other parasites can wreak havoc on your pet's skin and coat. Our dermatology services include comprehensive parasite control, providing preventive measures and effective treatment options to keep your pet protected and their skin healthy.</div>
         </div>
        </div> 
        <!-- Accordion Item 7 -->
         <div class="border-b border-slate-200">
          <button onclick="toggleAccordion(7)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
-          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Complementary to Other Treatments</span>
+          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Client Education and Support</span>
            <span id="icon-7" class=" transition-transform duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
           <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
         </button>
         <div id="content-7" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-         <div class="pb-5  xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Laser therapy can be used in conjunction with other treatment modalities to enhance overall outcomes. It can complement medications, rehabilitation exercises, acupuncture, or post-operative care, providing a holistic approach to pet healthcare.</div>
+         <div class="pb-5  xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">We believe in empowering pet owners with knowledge and understanding. Our dermatology team will provide you with detailed information about your pet's skin condition, treatment options, and long-term care recommendations. We are here to answer your questions and support you throughout your pet's skin care journey.</div>
         </div>
-       </div>  
+       </div>
+        <!-- Accordion Item 8 -->
+        <div class="border-b border-slate-200">
+         <button onclick="toggleAccordion(8)" class="w-full flex justify-between items-center text-start gap-3 py-8 text-slate-800">
+          <span class="text-[#494336] xl:text-2xl lg:text-xl md:text-lg text-base">Follow-up Care</span>
+           <span id="icon-8" class=" transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 31" fill="none"> <line x1="0.0338135" y1="15.9197" x2="30.0338" y2="15.9197" stroke="url(#paint0_linear_1204_1413)" stroke-width="2.5"/> <line x1="15.1472" y1="30.8062" x2="15.1472" y2="0.806152" stroke="url(#paint1_linear_1204_1413)" stroke-width="2.5"/>
+          <defs> <linearGradient id="paint0_linear_1204_1413" x1="0.0338135" y1="17.1697" x2="30.0338" y2="17.1697" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> <linearGradient id="paint1_linear_1204_1413" x1="16.3972" y1="30.8062" x2="16.3972" y2="0.806152" gradientUnits="userSpaceOnUse"> <stop stop-color="#FFA280"/> <stop offset="1" stop-color="#8FD9D9"/> </linearGradient> </defs> </svg> </span>
+        </button>
+        <div id="content-8" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+         <div class="pb-5  xl-text-lg lg:text-base text-sm text-[#494336] max-w-[970px] A-Regular">Dermatological conditions often require ongoing management. We offer follow-up appointments to monitor your pet's progress, adjust treatment plans if needed, and ensure optimal skin health in the long run. We are committed to being with you every step of the way.</div>
+        </div>
+       </div>    
       </div>
           </div>
        </div> 
     </div>
     </section>
-      <!--Experience Laser Therapy at Nebula Vets: -->
+      <!--Nebula Vets’ Difference in Dermatology and Skin Care: -->
      <section>
         <div class="bg-gray-200 lg:py-20 py-15">
             <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
                 <div class="xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0 xl:pe-24 lg:pe-18 md:pe-12 sm:pe-0">
-                  <h2 class="text-[#494336] pb-7 xl:text-4xl lg:text-3xl md:text-[27px] text-2xl A-Regular">Experience Laser Therapy at Nebula Vets:</h2>
-                  <p class="A-Regular text-[#494336] xl:text-xl lg:text-lg md:text-base text-sm max-w-[1040px]">At Nebula Vets, we are committed to utilizing the latest advancements in veterinary care to enhance the well-being of your pets. Laser therapy is just one example of our dedication to providing comprehensive and effective treatment options.</p>
+                  <h2 class="text-[#494336] pb-7 xl:text-4xl lg:text-3xl md:text-[27px] text-2xl A-Regular">Nebula Vets’ Difference in Dermatology and Skin Care:</h2>
+                  <p class="A-Regular text-[#494336] xl:text-xl lg:text-lg md:text-base text-sm max-w-[1090px]">At Nebula Vets, we understand the impact of healthy skin on your pet's quality of life. Our dermatology and skin care services are designed to address skin conditions, alleviate discomfort, and improve your pet's overall well-being. Trust us to provide exceptional care, utilizing advanced techniques and personalized treatment plans.</p>
                 </div>
             </div>
         </div>
@@ -175,7 +205,7 @@
            <div class="max-w-[1440px] mx-auto xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4">
             <div class="xl:ps-24 lg:ps-18 md:ps-12 sm:ps-0 ">
                 <h2 class="A-Regular text-[#D7D9DD] pb-7 xl:text-4xl lg:text-3xl text-2xl">We look forward to seeing you and your pet soon!</h2>
-                <p class="A-Regular text-[#D7D9DD] lg:text-xl md:text-lg sm:text-base text-sm pb-12 max-w-[850px]">If you believe that laser therapy could benefit your pet, we encourage you to schedule a consultation with our experienced veterinary team. We will assess your pet's condition, discuss treatment options, and develop a personalized plan that suits their specific needs.</p>
+                <p class="A-Regular text-[#D7D9DD] lg:text-xl md:text-lg sm:text-base text-sm pb-12 max-w-[860px]">Contact Nebula Vets today to schedule a dermatology consultation and let our experienced team bring the sparkle back to your pet's coat. Together, we will help your furry friend shine with healthy skin and a happy disposition.</p>
                 <a href="#" class="xl:text-lg text-base font-medium text-[#494336] hover:text-black duration-300 rounded-full xl:py-3 lg:py-2 py-1 xl:px-9 lg:px-7 px-5 bg-linear-to-r/srgb from-[#FFA280] to-[#8FD9D9]">BOOK NOW</a>
             </div>
             <div class="absolute right-0 bottom-0 lg:max-w-[530px] max-w-[450px]"><img src="./asstes/img/png/index-3 Nebula.png" alt="index-3 Nebula"></div>
@@ -215,16 +245,16 @@
                       <h2 class="xl:text-2xl lg:text-xl md:text-lg text-base text-[#D7D9DD] lg:pb-8 md:pb-6 sm:pb-4 pb-2.5">Services</h2>
                       <ul>
                         <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Preventive Care</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Sick Patient Care</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">Surgery</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="#">Additional Services</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./skin.html">Sick Patient Care</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="./surgery.html">Surgery</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="./Services.html">Additional Services</a> </li>
                       </ul>
                     </div>
                     <div>
                       <h2 class="xl:text-2xl lg:text-xl md:text-lg text-base text-[#D7D9DD] lg:pb-8 md:pb-6 sm:pb-4 pb-2.5">Company</h2>
                       <ul>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="#">About us</a> </li>
-                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="#">Carreers</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline pb-1 A-Regular"> <a href="About.html">About us</a> </li>
+                        <li class="lg:text-lg md:text-base text-sm text-[#D7D9DD] hover:text-black duration-300 underline A-Regular"> <a href="Career.html">Carreers</a> </li>
                       </ul>
                     </div>
                     <div>
@@ -257,5 +287,32 @@
     } else { content.style.maxHeight = content.scrollHeight + 'px'; icon.innerHTML = minusSVG;}
   }
 </script>
+ <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBar = document.getElementById("menu-bar");
+        const closeSidebar = document.getElementById("closeSidebar");
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const body = document.body;
+
+        menuBar.addEventListener("click", () => {
+          sidebar.classList.remove("hidden");
+          overlay.classList.remove("hidden");
+          body.classList.add("overflow-hidden");
+        });
+
+        closeSidebar.addEventListener("click", () => {
+          sidebar.classList.add("hidden");
+          overlay.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+
+        overlay.addEventListener("click", () => {
+          sidebar.classList.add("hidden");
+          overlay.classList.add("hidden");
+          body.classList.remove("overflow-hidden");
+        });
+      });
+    </script>
 </body>
 </html>
