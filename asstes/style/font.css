@@ -2,5 +2,7 @@
 @font-face {
   font-family: "AvanttTRIAL-Regular";
   src: url("/asstes/img/font-size/avantt-font-family-1737774395-0/AvanttTRIAL-Regular-BF6721a86b1a848.otf");}
+@font-face{font-family:"AvanttTRIAL-Bold"; src: url("/asstes/img/font-size/avantt-font-family-1737774395-0/AvanttTRIAL-Bold-BF6721a86b15f0a.otf");}
 .A-Regular {font-family: "AvanttTRIAL-Regular";}
+.A-bold{font-family:"AvanttTRIAL-Bold";}
  body{font-family: "Roboto Mono"}
